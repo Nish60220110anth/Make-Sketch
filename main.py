@@ -20,7 +20,7 @@ def GetBlur(image_content, blurStr):
     if blurStr == "GAUSSIAN":
         return cv2.GaussianBlur(image_content, (5, 5), 500)
     elif blurStr == "MEDIAN":
-        return cv2.medianBlur(src=image_content, ksize=(5, 5))
+        return cv2.medianBlur(src=image_content, ksize=5)
     else:
         return cv2.filter2D(image_content, -1, np.ones((5, 5), np.float32)/25)
 
